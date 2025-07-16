@@ -1,0 +1,5 @@
+hub TAK_DMSO_ATAC
+shortLabel TAK vs DMSO
+longLabel TAK-243 vs DMSO ATAC-seq
+genomesFile genomes.txt
+email william.walker2@bcm.edu

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAK-981 vs DMSO TOBIAS Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .header { background-color: #f0f8ff; padding: 20px; border-radius: 10px; }
+        .section { margin: 20px 0; }
+        .track-desc { background-color: #f9f9f9; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .stats { background-color: #fff3cd; padding: 15px; border-radius: 5px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TAK-981 SUMOylation Inhibitor vs DMSO Control</h1>
+        <h2>ATAC-seq Footprinting Analysis with TOBIAS</h2>
+        <p><strong>Analysis Date:</strong> Tue Jul 15 13:33:26 CDT 2025</p>
+    </div>
+    
+    <div class="section">
+        <h3>🧬 Experimental Design</h3>
+        <table>
+            <tr><th>Parameter</th><th>Value</th></tr>
+            <tr><td>Treatment</td><td>TAK-981 (SUMOylation inhibitor) vs DMSO control</td></tr>
+            <tr><td>Biological Replicates</td><td>4 per condition (8 total)</td></tr>
+            <tr><td>Method</td><td>ATAC-seq followed by TOBIAS footprinting</td></tr>
+            <tr><td>Genome Assembly</td><td>Mouse GRCm39/mm39</td></tr>
+            <tr><td>Cell Lines</td><td>M408, M1196, M1199, M1332</td></tr>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h3>📊 Track Types Available</h3>
+        
+        <div class="track-desc">
+            <h4>🔴 Corrected ATAC-seq Signal (Primary)</h4>
+            <p><strong>Most Important Tracks:</strong> Bias-corrected chromatin accessibility signal</p>
+            <ul>
+                <li>Blue tracks: DMSO control samples</li>
+                <li>Red tracks: TAK-981 treated samples</li>
+                <li>Shows where chromatin is accessible to transcription factors</li>
+                <li>Higher signal = more accessible chromatin</li>
+            </ul>
+        </div>
+        
+        <div class="track-desc">
+            <h4>👣 Footprint Scores</h4>
+            <p><strong>TF Binding Predictions:</strong> TOBIAS-calculated footprint scores</p>
+            <ul>
+                <li>Light blue: DMSO footprints</li>
+                <li>Orange: TAK-981 footprints</li>
+                <li>Higher scores = stronger predicted TF binding</li>
+                <li>Shows precise locations where TFs are likely bound</li>
+            </ul>
+        </div>
+        
+        <div class="track-desc">
+            <h4>📍 Peak Annotations</h4>
+            <p><strong>Accessible Regions:</strong> ATAC-seq peak calls</p>
+            <ul>
+                <li>Gray: All merged peaks across samples</li>
+                <li>Light gray: Unique peaks</li>
+                <li>Defines regions of chromatin accessibility</li>
+            </ul>
+        </div>
+        
+        <div class="track-desc">
+            <h4>🔍 Raw ATAC-seq (Hidden by Default)</h4>
+            <p><strong>Comparison Data:</strong> Uncorrected ATAC signal</p>
+            <ul>
+                <li>Shows raw data before bias correction</li>
+                <li>Useful for comparing correction effects</li>
+                <li>Hidden by default - activate to compare</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section stats">
+        <h3>🔬 Key Biological Findings</h3>
+        <ul>
+            <li><strong>1,646 transcription factors analyzed</strong> across the genome</li>
+            <li><strong>630 TFs show decreased binding</strong> (38.3%) after TAK-981</li>
+            <li><strong>697 TFs show increased binding</strong> (42.3%) after TAK-981</li>
+            <li><strong>AP-1 family most affected:</strong> JUNB, FOS, FOSL1 dramatically decreased</li>
+            <li><strong>Effect range:</strong> -18% to +43% binding change</li>
+            <li><strong>Statistical significance:</strong> All changes p < 1e-169</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>🎯 Suggested Viewing Regions</h3>
+        <table>
+            <tr><th>Gene/Region</th><th>Coordinates (mm39)</th><th>Expected Result</th></tr>
+            <tr><td>Fos (AP-1 component)</td><td>chr12:85,474,000-85,479,000</td><td>Decreased TAK signal</td></tr>
+            <tr><td>Jun (AP-1 component)</td><td>chr4:148,950,000-148,957,000</td><td>Decreased TAK signal</td></tr>
+            <tr><td>Junb (AP-1 component)</td><td>chr8:84,977,000-84,980,000</td><td>Decreased TAK signal</td></tr>
+            <tr><td>Smad2 (TGF-β pathway)</td><td>chr18:76,290,000-76,380,000</td><td>Decreased TAK signal</td></tr>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h3>🔬 Analysis Pipeline</h3>
+        <ol>
+            <li><strong>ATACorrect:</strong> Bias correction of ATAC-seq signal</li>
+            <li><strong>FootprintScores:</strong> Prediction of TF binding sites</li>
+            <li><strong>BINDetect:</strong> Differential binding analysis across 1,646 TFs</li>
+            <li><strong>Statistical Testing:</strong> Pairwise comparisons (16 per TF)</li>
+        </ol>
+        
+        <p><strong>Reference:</strong> Bentsen, M., Goymann, P., Schultheis, H. et al. TOBIAS: analysis of transcription factor binding and chromatin accessibility. Nat Commun 11, 5893 (2020).</p>
+    </div>
+    
+    <div class="section">
+        <h3>📧 Contact Information</h3>
+        <p>For questions about this analysis, contact the Martin Lab.</p>
+    </div>
+</body>
+</html>

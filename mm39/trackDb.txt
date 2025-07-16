@@ -1,0 +1,151 @@
+# Footprint Scores - Main tracks to view
+track footprints
+container multiWig
+shortLabel Footprint Scores
+longLabel TOBIAS Footprint Scores
+type bigWig
+visibility full
+aggregate none
+showSubtrackColorOnUi on
+autoScale off
+viewLimits -10:10
+maxHeightPixels 50:32:16
+
+    track DMSO_rep1_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep1_footprints.bw
+    shortLabel DMSO-1
+    longLabel DMSO Rep1 Footprints
+    type bigWig
+    color 0,0,255
+
+    track DMSO_rep2_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep2_footprints.bw
+    shortLabel DMSO-2
+    longLabel DMSO Rep2 Footprints
+    type bigWig
+    color 0,0,255
+
+    track DMSO_rep3_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep3_footprints.bw
+    shortLabel DMSO-3
+    longLabel DMSO Rep3 Footprints
+    type bigWig
+    color 0,0,255
+
+    track DMSO_rep4_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep4_footprints.bw
+    shortLabel DMSO-4
+    longLabel DMSO Rep4 Footprints
+    type bigWig
+    color 0,0,255
+
+    track TAK_rep1_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep1_footprints.bw
+    shortLabel TAK-1
+    longLabel TAK Rep1 Footprints
+    type bigWig
+    color 255,0,0
+
+    track TAK_rep2_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep2_footprints.bw
+    shortLabel TAK-2
+    longLabel TAK Rep2 Footprints
+    type bigWig
+    color 255,0,0
+
+    track TAK_rep3_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep3_footprints.bw
+    shortLabel TAK-3
+    longLabel TAK Rep3 Footprints
+    type bigWig
+    color 255,0,0
+
+    track TAK_rep4_fp
+    parent footprints
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep4_footprints.bw
+    shortLabel TAK-4
+    longLabel TAK Rep4 Footprints
+    type bigWig
+    color 255,0,0
+
+# Corrected Signal
+track corrected
+container multiWig
+shortLabel Corrected Signal
+longLabel Bias-Corrected ATAC Signal
+type bigWig
+visibility hide
+aggregate overlay
+showSubtrackColorOnUi on
+autoScale on
+
+    track DMSO_rep1_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep1_corrected.bw
+    shortLabel DMSO-1
+    longLabel DMSO Rep1 Corrected
+    type bigWig
+    color 0,0,255
+
+    track DMSO_rep2_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep2_corrected.bw
+    shortLabel DMSO-2
+    longLabel DMSO Rep2 Corrected
+    type bigWig
+    color 0,0,255
+
+    track DMSO_rep3_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep3_corrected.bw
+    shortLabel DMSO-3
+    longLabel DMSO Rep3 Corrected
+    type bigWig
+    color 0,0,255
+
+    track DMSO_rep4_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/DMSO_rep4_corrected.bw
+    shortLabel DMSO-4
+    longLabel DMSO Rep4 Corrected
+    type bigWig
+    color 0,0,255
+
+    track TAK_rep1_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep1_corrected.bw
+    shortLabel TAK-1
+    longLabel TAK Rep1 Corrected
+    type bigWig
+    color 255,0,0
+
+    track TAK_rep2_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep2_corrected.bw
+    shortLabel TAK-2
+    longLabel TAK Rep2 Corrected
+    type bigWig
+    color 255,0,0
+
+    track TAK_rep3_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep3_corrected.bw
+    shortLabel TAK-3
+    longLabel TAK Rep3 Corrected
+    type bigWig
+    color 255,0,0
+
+    track TAK_rep4_corr
+    parent corrected
+    bigDataUrl https://cam-walker-baylor.github.io/ATAC/tracks/TAK_rep4_corrected.bw
+    shortLabel TAK-4
+    longLabel TAK Rep4 Corrected
+    type bigWig
+    color 255,0,0
